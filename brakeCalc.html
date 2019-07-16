@@ -47,11 +47,13 @@
             >
                 <div>
                     <h5>Driver Reaction Time</h5>
-                    <select
+										<select
+												class= "form-control"
                         ng-model="selectedName"
                         ng-options="x for x in reactTime"
                     >
-                        <option value="normal">Normal</option>
+												<option value="">Select Reaction Time</option>
+												<option></option>
                         <option value="sharp">Sharp</option>
                         <option value="tired">Tired</option>
                         <option value="impaired">Impaired</option>

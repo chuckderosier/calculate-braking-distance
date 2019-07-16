@@ -3,6 +3,7 @@ app.controller('brakecalc', function CalculatorCtrl($scope) {
     $scope.yourSpeed = 70;
     $scope.speedLimit = 65;
     $scope.travelDistance = 0;
+    $scope.user = {};
     $scope.reactTime = [{
         title: "Sharp",
         value: 1
@@ -18,22 +19,53 @@ app.controller('brakecalc', function CalculatorCtrl($scope) {
     {
         title: "Impaired",
         value: 2.5
-    }
-];
-    $scope.roadConditions = {
-        dry: 1,
-        wet: 2,
-        raining: 3,
-        snow: 4,
-        icy: 5
-    };
-    $scope.roadGrade = {
-        steepUphill: .6,
-        uphill: .4,
-        bitUphill: .2,
-        flat: 0,
-        bitDownhill: -.2,
-        downhill: -.4,
-        steepDownhill: -.6,
-    };
+    }];
+    $scope.roadConditions = [{
+        title: "Dry",
+        value: 1
+    },
+    {
+        title: "Wet",
+        value: 2
+    },
+    {
+        title: "Raining",
+        value: 3
+    },
+    {
+        title: "Snowing",
+        value: 4
+    },
+    {
+        title: "Iced Over",
+        value: 5
+    }];
+    $scope.roadGrade = [{
+        title: "Steep Up Hill",
+        value: .6
+    },
+    {
+        title: "Uphill",
+        value: .4
+    },
+    {
+        title: "Slight Uphill",
+        value: .2
+    },
+    {
+        title: "Flat",
+        value: 0
+    },
+    {
+        title: "Slight Downhill",
+        value: -.2
+    },
+    {
+        title: "Downhill",
+        value: -.4
+    },
+    {
+        title: "Steep Downhill",
+        value: -.6
+    }];
 });
