@@ -53,10 +53,10 @@
                         ng-options="x for x in reactTime"
                     >
 												<option value="">Select Reaction Time</option>
-												<option></option>
-                        <option value="sharp">Sharp</option>
+												<option ng-repeat="reactionTimes in reactionTimes"></option>
+                        <!-- <option value="sharp">Sharp</option>
                         <option value="tired">Tired</option>
-                        <option value="impaired">Impaired</option>
+                        <option value="impaired">Impaired</option> -->
                     </select>
                 </div>
                 <div>
