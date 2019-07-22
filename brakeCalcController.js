@@ -3,6 +3,9 @@ app.controller('brakeCalcCtrl', function CalculatorCtrl($scope) {
     $scope.yourSpeed = 70;
     $scope.speedLimit = 65;
     $scope.travelDistance = 0;
+    $scope.youReact = 1.5;
+    $scope.weatherNow = 1;
+    $scope.slopeRoad = 0;
     $scope.user = {};
     $scope.reactTime = [{
         react: "Sharp",

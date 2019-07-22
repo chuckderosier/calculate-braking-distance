@@ -47,13 +47,14 @@
                 >
             </div>
             <div
-                class="vehicleSpecs"
+                class="conditionsSpecs"
                 ng-app="CalculatorApp"
             >
                 <div>
                     <h5>Driver Reaction Time</h5>
                     <select
                         class="select-style"
+                        ng-change="youReact"
                     >
                         <option value>Select Reaction Time</option>
                         <option
@@ -68,6 +69,7 @@
                     <h5>Weather Conditions</h5>
                     <select
                         class="select-style"
+                        ng-change="weatherNow"
                     >
                         <option value>Select Road Conditions</option>
                         <option
@@ -80,9 +82,7 @@
                 </div>
                 <div>
                     <h5>Slope of the Road</h5>
-                    <select
-                        class="select-style"
-                    >
+                    <select class="select-style" ng-change="slopeRoad">
                         <option value>Select Slope of the Road</option>
                         <option
                             ng-repeat="(key, value) in roadGrade"
@@ -100,9 +100,7 @@
                 <h4>Breaking Distance</h4>
                 <p>{{yourSpeed}}</p>
                 <div class="yourDistance">
-                    <p>
-                        {{ reactTime.value }} feet at your speed
-                    </p>
+                    <p>{{ youReact }} feet at your speed</p>
                 </div>
                 <div class="limitDistance">
                     <p>feet at the speed limit</p>
