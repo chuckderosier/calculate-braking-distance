@@ -53,20 +53,22 @@
                 <div>
                     <h5>Driver Reaction Time</h5>
                     <select
-                        class="form-control"
-                        ng-model="selectedName"
-                        ng-options="x for x in reactTime"
+                        class="select-style"
+                        <!-- ng-model="user.reactTime" -->
                     >
                         <option value>Select Reaction Time</option>
-                        <option ng-repeat="reactionTimes in reactionTime"></option>
-                        <!-- <option value="sharp">Sharp</option>
-                        <option value="tired">Tired</option>
-                        <option value="impaired">Impaired</option> -->
+                        <option
+                            ng-repeat="(key, value) in reactTime"
+                            value="{{value.adjustment}}"
+                        >
+                            {{ value.title }}
+                        </option>
                     </select>
                 </div>
                 <div>
                     <h5>Weather Conditions</h5>
                     <select
+                        class="select-style"
                         ng-model="selectedName"
                         ng-options="x for x in roadConditions"
                     >
@@ -80,6 +82,7 @@
                 <div>
                     <h5>Slope of the Road</h5>
                     <select
+                        class="select-style"
                         ng-model="selectedName"
                         ng-options="x for x in roadGrade"
                     >

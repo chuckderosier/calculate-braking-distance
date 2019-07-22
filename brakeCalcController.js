@@ -6,66 +6,66 @@ app.controller('brakeCalcCtrl', function CalculatorCtrl($scope) {
     $scope.user = {};
     $scope.reactTime = [{
         title: "Sharp",
-        value: 1
+        adjustment: 1
     },
     {
         title: "Normal",
-        value: 1.5
+        adjustment: 1.5
     },
     {
         title: "Tired",
-        value: 2
+        adjustment: 2
     },
     {
         title: "Impaired",
-        value: 2.5
+        adjustment: 2.5
     }];
     $scope.roadConditions = [{
         title: "Dry",
-        value: 1
+        adjustment: 1
     },
     {
         title: "Wet",
-        value: 2
+        adjustment: 2
     },
     {
         title: "Raining",
-        value: 3
+        adjustment: 3
     },
     {
         title: "Snowing",
-        value: 4
+        adjustment: 4
     },
     {
         title: "Iced Over",
-        value: 5
+        adjustment: 5
     }];
     $scope.roadGrade = [{
         title: "Steep Up Hill",
-        value: .6
+        adjustment: .6
     },
     {
         title: "Uphill",
-        value: .4
+        adjustment: .4
     },
     {
         title: "Slight Uphill",
-        value: .2
+        adjustment: .2
     },
     {
         title: "Flat",
-        value: 0
+        adjustment: 0
     },
     {
         title: "Slight Downhill",
-        value: -.2
+        adjustment: -.2
     },
     {
         title: "Downhill",
-        value: -.4
+        adjustment: -.4
     },
     {
         title: "Steep Downhill",
-        value: -.6
+        adjustment: -.6
     }];
 });
