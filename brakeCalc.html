@@ -10,13 +10,18 @@
             http-equiv="X-UA-Compatible"
             content="ie=edge"
         >
-				<title>Document</title>
-				<link rel="stylesheet" href="brakeCalc.css" />
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-				<script src="brakeCalc.js"></script>
+        <title>Document</title>
+        <link rel="stylesheet" href="brakeCalc.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="brakeCalc.js"></script>
+        <script src="brakeCalc.module.js"></script>
     </head>
     <body>
-        <div style="text-align:center">
+        <div
+            style="text-align:center"
+            ng-app="brakeCalc"
+            ng-controller="brakeCalc"
+        >
             <h1>Braking Distance Calculator</h1>
             <div class="vehicleSpeeds">
                 <input
@@ -47,13 +52,13 @@
             >
                 <div>
                     <h5>Driver Reaction Time</h5>
-										<select
-												class= "form-control"
+                    <select
+                        class="form-control"
                         ng-model="selectedName"
                         ng-options="x for x in reactTime"
                     >
-												<option value="">Select Reaction Time</option>
-												<option ng-repeat="reactionTimes in reactionTimes"></option>
+                        <option value>Select Reaction Time</option>
+                        <option ng-repeat="reactionTimes in reactionTime"></option>
                         <!-- <option value="sharp">Sharp</option>
                         <option value="tired">Tired</option>
                         <option value="impaired">Impaired</option> -->

@@ -1,1 +1,1 @@
-var app = angular.module('brakecalc', []);
+var app = angular.module('brakeCalc', []);

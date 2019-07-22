@@ -1,5 +1,5 @@
-var app = angular.module('brakecalcapp')
-app.controller('brakecalc', function CalculatorCtrl($scope) {
+var app = angular.module('brakeCalc', [])
+app.controller('brakeCalc', function CalculatorCtrl($scope) {
     $scope.yourSpeed = 70;
     $scope.speedLimit = 65;
     $scope.travelDistance = 0;
