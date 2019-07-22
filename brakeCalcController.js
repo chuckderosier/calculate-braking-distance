@@ -5,67 +5,67 @@ app.controller('brakeCalcCtrl', function CalculatorCtrl($scope) {
     $scope.travelDistance = 0;
     $scope.user = {};
     $scope.reactTime = [{
-        title: "Sharp",
-        adjustment: 1
+        react: "Sharp",
+        time: 1
     },
     {
-        title: "Normal",
-        adjustment: 1.5
+        react: "Normal",
+        time: 1.5
     },
     {
-        title: "Tired",
-        adjustment: 2
+        react: "Tired",
+        time: 2
     },
     {
-        title: "Impaired",
-        adjustment: 2.5
+        react: "Impaired",
+        time: 2.5
     }];
     $scope.roadConditions = [{
-        title: "Dry",
-        adjustment: 1
+        condition: "Dry",
+        grip: 1
     },
     {
-        title: "Wet",
-        adjustment: 2
+        condition: "Wet",
+        grip: 2
     },
     {
-        title: "Raining",
-        adjustment: 3
+        condition: "Raining",
+        grip: 3
     },
     {
-        title: "Snowing",
-        adjustment: 4
+        condition: "Snowing",
+        grip: 4
     },
     {
-        title: "Iced Over",
-        adjustment: 5
+        condition: "Iced Over",
+        grip: 5
     }];
     $scope.roadGrade = [{
-        title: "Steep Up Hill",
-        adjustment: .6
+        grade: "Steep Up Hill",
+        degree: .6
     },
     {
-        title: "Uphill",
-        adjustment: .4
+        grade: "Uphill",
+        degree: .4
     },
     {
-        title: "Slight Uphill",
-        adjustment: .2
+        grade: "Slight Uphill",
+        degree: .2
     },
     {
-        title: "Flat",
-        adjustment: 0
+        grade: "Flat",
+        degree: 0
     },
     {
-        title: "Slight Downhill",
-        adjustment: -.2
+        grade: "Slight Downhill",
+        degree: -.2
     },
     {
-        title: "Downhill",
-        adjustment: -.4
+        grade: "Downhill",
+        degree: -.4
     },
     {
-        title: "Steep Downhill",
-        adjustment: -.6
+        grade: "Steep Downhill",
+        degree: -.6
     }];
 });

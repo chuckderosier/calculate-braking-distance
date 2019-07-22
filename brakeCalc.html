@@ -40,7 +40,7 @@
                 >
                 <input
                     type="text"
-                    ni-model="travelDistance"
+                    ng-model="travelDistance"
                     class="textBox"
                     placeholder="Travel Distance"
                     name="travelDistance"
@@ -54,14 +54,13 @@
                     <h5>Driver Reaction Time</h5>
                     <select
                         class="select-style"
-                        <!-- ng-model="user.reactTime" -->
                     >
                         <option value>Select Reaction Time</option>
                         <option
                             ng-repeat="(key, value) in reactTime"
-                            value="{{value.adjustment}}"
+                            value="{{value.time}}"
                         >
-                            {{ value.title }}
+                            {{ value.react }}
                         </option>
                     </select>
                 </div>
@@ -69,30 +68,28 @@
                     <h5>Weather Conditions</h5>
                     <select
                         class="select-style"
-                        ng-model="selectedName"
-                        ng-options="x for x in roadConditions"
                     >
-                        <option value="fair">Fair</option>
-                        <option value="wet">Wet</option>
-                        <option value="raining">Raining</option>
-                        <option value="snowing">Snowing</option>
-                        <option value="icy">Icy</option>
+                        <option value>Select Road Conditions</option>
+                        <option
+                            ng-repeat="(key, value) in roadConditions"
+                            value="{{value.grip}}"
+                        >
+                            {{ value.condition }}
+                        </option>
                     </select>
                 </div>
                 <div>
                     <h5>Slope of the Road</h5>
                     <select
                         class="select-style"
-                        ng-model="selectedName"
-                        ng-options="x for x in roadGrade"
                     >
-                        <option value="flat">Flat</option>
-                        <option value="bitUphill">Bit Uphill</option>
-                        <option value="uphill">Uphill</option>
-                        <option value="steepUphill">Steep Uphill</option>
-                        <option value="bitDownhill">Bit Downhill</option>
-                        <option value="downhill">Downhill</option>
-                        <option value="steepDownhill">Steep Downhill</option>
+                        <option value>Select Slope of the Road</option>
+                        <option
+                            ng-repeat="(key, value) in roadGrade"
+                            value="{{value.degree}}"
+                        >
+                            {{ value.grade }}
+                        </option>
                     </select>
                 </div>
             </div>
