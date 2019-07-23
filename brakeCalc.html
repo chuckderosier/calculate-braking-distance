@@ -54,8 +54,10 @@
                     <h5>Driver Reaction Time</h5>
                     <select
                         class="select-style"
+                        ng-model="select"
                         ng-change="youReact"
                     >
+                        >
                         <option value>Select Reaction Time</option>
                         <option
                             ng-repeat="(key, value) in reactTime"
@@ -69,8 +71,10 @@
                     <h5>Weather Conditions</h5>
                     <select
                         class="select-style"
+                        ng-model="select"
                         ng-change="weatherNow"
                     >
+                        >
                         <option value>Select Road Conditions</option>
                         <option
                             ng-repeat="(key, value) in roadConditions"
@@ -82,7 +86,12 @@
                 </div>
                 <div>
                     <h5>Slope of the Road</h5>
-                    <select class="select-style" ng-change="slopeRoad">
+                    <select
+                        class="select-style"
+                        ng-model="select"
+                        ng-change="slopeRoad"
+                    >
+                        >
                         <option value>Select Slope of the Road</option>
                         <option
                             ng-repeat="(key, value) in roadGrade"
