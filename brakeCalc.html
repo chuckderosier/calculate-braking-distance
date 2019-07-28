@@ -49,21 +49,21 @@
             <div
                 class="conditionsSpecs"
                 ng-app="CalculatorApp"
+                ng-controller="brakeCalcCtrl"
             >
                 <div>
                     <h5>Driver Reaction Time</h5>
                     <select
                         class="select-style"
-                        ng-model="select"
                         ng-change="youReact"
                     >
                         >
                         <option value>Select Reaction Time</option>
                         <option
-                            ng-repeat="(key, value) in reactTime"
-                            value="{{value.time}}"
+                            ng-option="x.react for x in reactTime"
+                            value="{{youReact.time}}"
                         >
-                            {{ value.react }}
+                            {{ youReact.react }}
                         </option>
                     </select>
                 </div>
@@ -71,13 +71,12 @@
                     <h5>Weather Conditions</h5>
                     <select
                         class="select-style"
-                        ng-model="select"
                         ng-change="weatherNow"
                     >
                         >
                         <option value>Select Road Conditions</option>
                         <option
-                            ng-repeat="(key, value) in roadConditions"
+                            ng-option="(key, value) in roadConditions"
                             value="{{value.grip}}"
                         >
                             {{ value.condition }}
@@ -88,13 +87,12 @@
                     <h5>Slope of the Road</h5>
                     <select
                         class="select-style"
-                        ng-model="select"
                         ng-change="slopeRoad"
                     >
                         >
                         <option value>Select Slope of the Road</option>
                         <option
-                            ng-repeat="(key, value) in roadGrade"
+                            ng-option="(key, value) in roadGrade"
                             value="{{value.degree}}"
                         >
                             {{ value.grade }}
