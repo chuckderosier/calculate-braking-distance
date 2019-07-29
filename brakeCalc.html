@@ -14,113 +14,111 @@
         <link rel="stylesheet" href="brakeCalc.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="brakeCalcController.js"></script>
-        <!-- <script src="brakeCalcModule.js"></script> -->
     </head>
     <body>
         <div
-            style="text-align:center"
             ng-app="brakeCalc"
             ng-controller="brakeCalcCtrl"
         >
-            <h1>Braking Distance Calculator</h1>
-            <div class="vehicleSpeeds">
-                <input
-                    type="text"
-                    ng-model="yourSpeed"
-                    class="textBox"
-                    placeholder="Your Speed"
-                    name="yourSpeed"
-                >
-                <input
-                    type="text"
-                    ng-model="speedLimit"
-                    class="textBox"
-                    placeholder="Speed Limit"
-                    name="speedLimit"
-                >
-                <input
-                    type="text"
-                    ng-model="travelDistance"
-                    class="textBox"
-                    placeholder="Travel Distance"
-                    name="travelDistance"
-                >
-            </div>
-            <div
-                class="conditionsSpecs"
-                ng-app="brakeCalc"
-                ng-controller="brakeCalcCtrl"
-            >
-                <div>
-                    <h5>Driver Reaction Time</h5>
-                    <select
-                        class="select-style"
-                        
+            <div class="input-style">
+                <h1>Braking Distance Calculator</h1>
+                <div class="vehicleSpeeds">
+                    <input
+                        type="text"
+                        ng-model="yourSpeed"
+                        class="textBox"
+                        placeholder="Your Speed"
+                        name="yourSpeed"
                     >
-                        >
-                        <option value>Select Reaction Time</option>
-                        <option
-                            class="option-style"
-                            ng-repeat="(key, value) in reactTime"
-                            value="{{value.time}}"
-                        >
-                            {{ value.react }}
-                        </option>
-                    </select>
+                    <input
+                        type="text"
+                        ng-model="speedLimit"
+                        class="textBox"
+                        placeholder="Speed Limit"
+                        name="speedLimit"
+                    >
+                    <input
+                        type="text"
+                        ng-model="travelDistance"
+                        class="textBox"
+                        placeholder="Travel Distance"
+                        name="travelDistance"
+                    >
                 </div>
-                <div>
-                    <h5>Weather Conditions</h5>
-                    <select class="select-style">
-                        >
-                        <option value>Select Road Conditions</option>
-                        <option
-                            class="option-style"
-                            ng-repeat="(key, value) in roadConditions"
-                            value="{{value.grip}}"
-                        >
-                            {{ value.condition }}
-                        </option>
-                    </select>
+                <div
+                    class="conditionsSpecs"
+                    ng-app="brakeCalc"
+                    ng-controller="brakeCalcCtrl"
+                >
+                    <div>
+                        <h5>Driver Reaction Time</h5>
+                        <select class="select-style">
+                            >
+                            <option value>Select Reaction Time</option>
+                            <option
+                                ng-model="youReact"
+                                class="option-style"
+                                ng-repeat="(key, value) in reactTime"
+                                value="{{value.time}}"
+                            >
+                                {{ value.react }}
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <h5>Weather Conditions</h5>
+                        <select class="select-style">
+                            >
+                            <option value>Select Road Conditions</option>
+                            <option
+                                class="option-style"
+                                ng-repeat="(key, value) in roadConditions"
+                                value="{{value.grip}}"
+                            >
+                                {{ value.condition }}
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <h5>Slope of the Road</h5>
+                        <select class="select-style">
+                            >
+                            <option value>Select Slope of the Road</option>
+                            <option
+                                ng-repeat="(key, value) in roadGrade"
+                                value="{{value.degree}}"
+                            >
+                                {{ value.grade }}
+                            </option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <h5>Slope of the Road</h5>
-                    <select class="select-style">
-                        >
-                        <option value>Select Slope of the Road</option>
-                        <option
-                            ng-repeat="(key, value) in roadGrade"
-                            value="{{value.degree}}"
-                        >
-                            {{ value.grade }}
-                        </option>
-                    </select>
-                </div>
+                <div class="resultsTable"></div>
             </div>
-            <div class="resultsTable"></div>
-        </div>
-        <div class="display">
-            <div class="distance">
-                <h4>Breaking Distance</h4>
-                <p>{{yourSpeed}}</p>
-                <div class="yourDistance">
-                    <p>{{ youReact }} feet at your speed</p>
+            <div class="display-style">
+                <div class="distance">
+                    <h4>Breaking Distance</h4>
+                    <p>{{yourSpeed}}</p>
+                    <div class="yourDistance">
+                        <p>{{ youReact }} feet at your speed</p>
+                    </div>
+                    <div class="limitDistance">
+                        <p>feet at the speed limit</p>
+                    </div>
                 </div>
-                <div class="limitDistance">
-                    <p>feet at the speed limit</p>
+                <div class="carLengths">
+                    <h4>Car Lengths Needed to Brake Safely</h4>
+                    <div class="yourCarLength">
+                        <p>lengths at your speed</p>
+                    </div>
+                    <div class="limitCarLength">
+                        <p>lengths at speed limit</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carLengths">
-                <h4>Car Lengths Needed to Brake Safely</h4>
-                <div class="yourCarLength">
-                    <p>lengths at your speed</p>
+                <div class="timeSaved">
+                    <h4>Time Saved on Your Trip</h4>
+                    <p>minutes</p>
                 </div>
-                <div class="limitCarLength">
-                    <p>lengths at speed limit</p>
-                </div>
-            </div>
-            <div class="timeSaved">
-                <h4>Time Saved on Your Trip</h4>
-                <p>minutes</p>
             </div>
         </div>
     </body>
