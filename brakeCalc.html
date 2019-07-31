@@ -56,10 +56,11 @@
                             >
                             <option value>Select Reaction Time</option>
                             <option
-                                ng-model="youReact"
                                 class="option-style"
                                 ng-repeat="(key, value) in reactTime"
                                 value="{{value.time}}"
+                                select="selected"
+                                ng-model="youReact"
                             >
                                 {{ value.react }}
                             </option>
